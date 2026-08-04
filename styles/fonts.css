@@ -1,9 +1,10 @@
 /* Self-hosted brand fonts — Inter (sans) and JetBrains Mono (mono).
 
-   The Tauri app must render correctly with no network at all, so the woff2
-   files ship inside the bundle instead of being pulled from Google Fonts
-   (docs/design-system/02-brand.md § Typography). Without this file the app
-   silently falls back to system-ui and the brand typography is lost.
+   Every consumer must render correctly with no network at all — the Tauri app
+   has no connection to spend on fonts and the marketing site should not hand
+   Google a request per visitor — so the woff2 files ship inside this package
+   instead of being pulled from a CDN. Without this file every surface silently
+   falls back to system-ui and the brand typography is lost.
 
    Files are the latin subsets from @fontsource 5.2.6 (Inter 4.1, JetBrains
    Mono 2.304), both SIL OFL 1.1 — redistribution is fine, the licence travels
@@ -14,7 +15,7 @@
    Tailwind v4 rebases urls against the file that declares them when it inlines
    an @import. Verified with a vite 6 + @tailwindcss/vite build.
 
-   Import this once, from design-system/styles/globals.css:
+   Import this once, from styles/globals.css:
        @import "./fonts.css";
 
    font-display: swap — the app shell must paint before the fonts decode. */
@@ -24,7 +25,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/inter-400.woff2") format("woff2");
+  src: url("../fonts/inter-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -32,7 +33,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/inter-500.woff2") format("woff2");
+  src: url("../fonts/inter-500.woff2") format("woff2");
 }
 
 @font-face {
@@ -40,7 +41,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/inter-600.woff2") format("woff2");
+  src: url("../fonts/inter-600.woff2") format("woff2");
 }
 
 @font-face {
@@ -48,7 +49,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/inter-700.woff2") format("woff2");
+  src: url("../fonts/inter-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -56,7 +57,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/jetbrains-mono-400.woff2") format("woff2");
+  src: url("../fonts/jetbrains-mono-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -64,7 +65,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/jetbrains-mono-500.woff2") format("woff2");
+  src: url("../fonts/jetbrains-mono-500.woff2") format("woff2");
 }
 
 @font-face {
@@ -72,5 +73,5 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../../apps/autostand-app/src/fonts/jetbrains-mono-700.woff2") format("woff2");
+  src: url("../fonts/jetbrains-mono-700.woff2") format("woff2");
 }

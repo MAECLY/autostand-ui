@@ -1,7 +1,8 @@
-/* Shared design-system stylesheet.
-   Single source of truth for Tailwind v4 + autostand design tokens.
-   Consumed by the Tauri app (apps/autostand-app/src/styles/globals.css)
-   and by Storybook (.storybook/preview.ts). */
+/* The design system's stylesheet: Tailwind v4 plus the autostand tokens.
+   Every surface imports this one file — the Tauri app, this package's Storybook
+   and the marketing site — so a token edit re-themes all of them at once.
+
+       @import "@autostand/ui/styles.css"; */
 
 @import "tailwindcss";
 @import "../tokens/tokens.css";
@@ -12,9 +13,10 @@
 /* Dark mode is class-based: tokens.css defines the `.dark` override block. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Component sources live next to this file, outside any consuming app's root,
+/* Component sources live inside this package, outside any consuming app's root,
    so Tailwind's auto-detection would never reach them. */
 @source "../components";
+@source "../icons";
 
 @theme {
   /* Surfaces + text */

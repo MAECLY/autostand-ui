@@ -1,8 +1,38 @@
 {
-  "name": "design-system",
+  "name": "@autostand/ui",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "description": "autostand design system — tokens, base components, icons and Storybook",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAECLY/autostand-ui.git"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./components": "./components/index.ts",
+    "./components/*": "./components/*.tsx",
+    "./icons": "./icons/index.tsx",
+    "./lib/utils": "./lib/utils.ts",
+    "./tokens.css": "./tokens/tokens.css",
+    "./styles.css": "./styles/globals.css",
+    "./fonts.css": "./styles/fonts.css",
+    "./fonts/*": "./fonts/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "components",
+    "icons",
+    "lib",
+    "src",
+    "styles",
+    "tokens",
+    "fonts"
+  ],
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -10,11 +40,12 @@
     "typecheck": "tsc --noEmit",
     "test": "echo 'no tests yet'"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
     "lucide-react": "^0.460.0",
-    "tailwindcss": "^4.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.5",
@@ -35,6 +66,9 @@
     "@radix-ui/react-tooltip": "^1.1.0"
   },
   "devDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
