@@ -59,7 +59,11 @@ pnpm storybook          # http://localhost:6006
 pnpm lint && pnpm typecheck && pnpm build-storybook
 ```
 
-Storybook publishes to GitHub Pages on every push to `main`.
+CI builds Storybook on every push and pull request, which is what catches a broken story.
+
+Publishing it is optional and goes through Vercel like the rest of autostand's hosting — `vercel.json` already
+declares the build command and output directory, so connecting this repo in Vercel is all it takes. Nothing is
+published until you do; until then Storybook is a local tool.
 
 ## What is here
 
