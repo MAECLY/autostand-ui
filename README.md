@@ -1,6 +1,6 @@
 # @autostand/ui
 
-The autostand design system: design tokens, 24 base components, the custom icon set, the self-hosted brand
+The autostand design system: design tokens, 26 base components, the custom icon set, the self-hosted brand
 fonts, and the Storybook that documents all of it.
 
 This package is the single source of truth for how autostand looks. It is consumed by:
@@ -72,8 +72,8 @@ published until you do; until then Storybook is a local tool.
 - `styles/globals.css` — the Tailwind v4 setup and the `@theme` mapping. Consumers import this, not Tailwind.
 - `styles/fonts.css` + `fonts/` — Inter and JetBrains Mono, latin subsets, SIL OFL. Self-hosted so no surface
   depends on a font CDN at runtime.
-- `components/` — 24 base components (Radix + CVA), each with a `.stories.tsx`. Pure presentation: no data
-  fetching, no app types, no Tauri.
+- `components/` — 26 base components (Radix + CVA), each with a `.stories.tsx`. Pure presentation: no data
+  fetching, no app types, no Tauri. `Calendar` / `DatePicker` take a local `YYYY-MM-DD` filing date.
 - `icons/` — the six concepts lucide does not cover, drawn to lucide's conventions.
 
 Components use **relative** imports internally (`../lib/utils`): the `@/` alias means something different in
