@@ -1,9 +1,10 @@
 {
   "name": "@autostand/ui",
   "version": "0.1.0",
+  "packageManager": "pnpm@11.18.0",
   "private": true,
   "type": "module",
-  "description": "autostand design system — tokens, base components, icons and Storybook",
+  "description": "autostand design system \u2014 tokens, base components, icons and Storybook",
   "license": "MIT",
   "repository": {
     "type": "git",
