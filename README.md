@@ -1,5 +1,7 @@
 # @autostand/ui
 
+[![Stars](https://img.shields.io/github/stars/MAECLY/autostand-ui?style=flat-square)](https://github.com/MAECLY/autostand-ui/stargazers) [![Views](https://hits.sh/github.com/MAECLY/autostand-ui.svg?label=views&style=flat-square)](https://hits.sh/github.com/MAECLY/autostand-ui/) [![Last commit](https://img.shields.io/github/last-commit/MAECLY/autostand-ui?style=flat-square)](https://github.com/MAECLY/autostand-ui/commits/main)
+
 The autostand design system: design tokens, 26 base components, the custom icon set, the self-hosted brand
 fonts, and the Storybook that documents all of it.
 
