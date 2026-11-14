@@ -10,7 +10,7 @@ This package is the single source of truth for how autostand looks. It is consum
 | Surface | Repo |
 | --- | --- |
 | The desktop app | [`MAECLY/autostand`](https://github.com/MAECLY/autostand) |
-| The marketing site | [`MAECLY/autostand-landing-page`](https://github.com/MAECLY/autostand-landing-page) |
+| The marketing site | [autostand.maecly.com](https://autostand.maecly.com) (source in a private repository) |
 
 ## Using it
 
